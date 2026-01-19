@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Pofile </title>
+
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {margin: 0;font-family: 'Poppins', sans-serif;background: linear-gradient(135deg, #d7e3f0, #b8c7d9);display: flex;flex-direction: column;height: 100vh;}
+
+/* TOP HORIZONTAL BUTTON BAR */
+.sidebar {width: 100%;height: 80px;background: #0a1a2b;display: flex;justify-content: center;align-items: center;gap: 25px;}
+
+/* BUTTONS */
+.icon {width: 55px;height: 55px;background: rgba(20, 39, 63, 0.85);border-radius: 18px;display: flex;justify-content: center;align-items: center;font-size: 20px;color: white;}
+
+
+
+/*MAIN CONTENT*/
+.content {flex: 1;display: flex;justify-content: center;align-items: center;}
+
+.card {background:rgba(255,255,255,0.6);padding: 20px;border-radius: 20px;box-shadow: 0 4px 20px rgba(0,0,0,0.15);backdrop-filter: blur(12px);}
+
+.section-box {width:330px;background: #3b82b6;padding: 25px;border-radius: 22px;color:white;text-align: center;box-shadow: 0 6px 25px rgba(0,0,0,0.25);}
+
+.profile-img {width:130px;height: 130px;border-radius: 50%;border: 4px solid #ffde59;object-fit: cover;}
+</style>
+</head>
+<body>
+<!TOP MENU>
+<div class="sidebar">
+<div class="icon" onclick="show('home')">🏠</div>
+<div class="icon" onclick="show('about')">A</div>
+<div class="icon" onclick="show('skills')">S</div>
+<div class="icon" onclick="show('projects')">P</div>
+<div class="icon" onclick="show('contact')">C</div>
+</div>
+
+<!CONTENT AREA>
+<div class="content">
+<!HOME>
+<div id="home" class="page card" style="display:flex;">
+<div class="section-box">
+<h2 style="color:#ffde59;">Welcome To My Profile </h2>
+<img src="C:\Users\admin\Pictures\Piyush.jpg""Piyush.jpg"alt="Profile Photo"style="width:130px;height:130px;border-radius:50%;border:4px solid #ffde59;object-fit:cover;margin:15px 0;">
+<h3 style="margin-top:15px;">Piyush Chouhan</h3>
+</div>
+</div>
+
+<!ABOUT>
+<div id="about" class="page card" style="display:none;">
+<div class="section-box">
+<h2>About Me</h2>
+<p>I am Piyush Chouhan from Barlai Jagir Kshipra, Indore.I am learning web development and creating projects.I am hardworking and self-motivated.</p>
+</div>
+</div>
+
+<!SKILLS>
+<div id="skills" class="page card" style="display:none;">
+<div class="section-box">
+<h2>Skills</h2>
+<ul style="text-align:left; line-height:1.8;">
+<li>HTML</li><li>C Language</li><li>Python</li><li>Editing</li>
+</ul>
+</div>
+</div>
+
+<!PROJECTS>
+<div id="projects" class="page card" style="display:none;">
+<div class="section-box">
+<h2>Projects</h2>
+<ul style="text-align:left; line-height:1.8;">
+<li>Personal Portfolio</li><li>Landing Page</li><li>To-Do App</li>
+</ul>
+</div>
+</div>
+
+<!CONTACT>
+<div id="contact" class="page card" style="display:none;">
+<div class="section-box">
+<h2>Contact</h2>
+<p>Email: Piyush@gmail.com</p>
+<p>Phone: 8085858083</p>
+<p>Location: Indore, MP</p>
+</div>
+</div>
+</div>
+
+<script>
+function show(id){document.querySelectorAll('.page').forEach(page => {page.style.display='none';});document.getElementById(id).style.display='flex';}
+</script>
+
+</body>
+</html>
